@@ -19,7 +19,6 @@ class ArticleController extends Controller
     }
     public function index(){
         $data=Article::latest()->paginate(5);
-        return $data;
         return view('articles.index',[
             'articles'=>$data
         ]);
